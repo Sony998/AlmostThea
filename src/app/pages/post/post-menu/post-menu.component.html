@@ -1,0 +1,36 @@
+<form (ngSubmit)="onSubmit()" class="formContainer">
+    <h2>Nuevo Producto</h2>
+  
+    <input type="text" (input)="Emit()" class="inputItem" placeholder="Nombre del producto" [(ngModel)]="product.name" name="name">
+  
+    <input type="text" (input)="Emit()" class="inputItem" placeholder="Precio" [(ngModel)]="product.price" name="price">
+    <input type="text" class="inputItem mediumItem" placeholder="Nueva etiqueta" [(ngModel)]="tag" name="tag">
+    <button type="button" class="addButton" (click)="addTag(); Emit()">add tag</button>
+    <input type="text" class="inputItem mediumItem" placeholder="Nueva talla" [(ngModel)]="size" name="size">
+    <button type="button" (click)="addSize(); Emit()" class="addButton">add size</button>
+    <input type="text" class="inputItem mediumItem" placeholder="Nueva url" [(ngModel)]="url" name="url">
+    <button type="button" (click)="addUrl(); Emit()" class="addButton">add Img</button>
+    <div class="colorContainer">
+      <input type="color" class="inputItem mediumItem color" [(ngModel)]="color" name="color">
+      <button type="button" (click)="addColor(); Emit();" class="addButton colorButton">add color</button>
+      <div class="radioContainer">
+        <input type="checkbox" [(ngModel)]="female" (change)="addGender()" name="female">
+        <label for="html">Mujer</label>
+        <input type="checkbox" [(ngModel)]="male" (change)="addGender()" name="male">
+        <label for="html">Hombre</label>
+      </div>
+    </div>
+  
+    <div class="relevanceContainer">
+      <div class="e">
+        <p class="relevanceText">Relevancia</p>
+        <input type="range" class="relevanceBar" [(ngModel)]="product.relevance" name="relevance">
+      </div>
+      <input type="text" class="relevanceNumber inputItem" [(ngModel)]="product.relevance" max="100" name="relevance">
+    </div>
+  
+    <div class="submitContainer">
+      <button type="submit" class="addButton submitButton">Publicar</button>
+    </div>
+  </form>
+  

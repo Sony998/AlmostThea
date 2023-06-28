@@ -1,0 +1,46 @@
+<nav class="navbar">
+  <img
+    class="logo"
+    routerLink=""
+    src="https://i.ibb.co/x6Vfdmk/Logo-Recortado.jpg"
+    alt="Logo-Recortado"
+    border="0"
+  />
+  <form class="mt-10 placeHolder">
+    <div class="mt-5">
+      <input
+        type="text"
+        name="producto"
+        placeholder="&#xf002; Escribe algo ..."
+        id="producto"
+        class="form-control"
+        [(ngModel)]="valueInput"
+        (click)="onInputChange($event)"
+        (keyup.enter)="onEnter($event)"
+        (ngModelChange)="search($event)"
+      />
+    </div>
+  </form>
+  <div class="carMenu">
+    <img
+      [routerLink]="['/shoppingCar']"
+      id="car"
+      src="https://i.postimg.cc/L4vy0c5J/shoppingcar.png"
+    />
+    <img
+      (click)="toggle()"
+      id="categorias"
+      src="https://www.novamedicaltda.com/wp-content/uploads/2021/10/menu-mobile-o.png"
+      alt=""
+    />
+  </div>
+</nav>
+<div [ngClass]="{ 'cuadro-blanco': showSquare }" *ngIf="showSquare">
+  <ul>
+    <li class="result" *ngFor="let item of data" (click)="noshow($event)" [routerLink]="['/search', formatAsURL(item)]" queryParamsHandling="preserve">
+        <i class="bi bi-search"></i> {{ item }}
+        <i class="bi bi-arrow-up-left-square-fill arroww"></i>
+      </li>
+      
+  </ul>
+</div>

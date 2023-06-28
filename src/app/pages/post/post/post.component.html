@@ -1,0 +1,24 @@
+<link href='https://fonts.googleapis.com/css?family=Fira Code' rel='stylesheet'>
+<div class="postContainer">
+</div>
+<app-navbar></app-navbar>
+<div class="template">
+ 
+
+
+  <app-post-menu class="formMenu" (message)=productsRecive($event)></app-post-menu>
+
+  <div class="frameContainer"> 
+   <app-frame class="appFrame" [product]="products"></app-frame>
+   <img class="frameIphone" src="https://i.postimg.cc/KYtvCT9d/298cbe405a3d8d631f419d2fabc4786a-1-removebg-preview-1-removebg-preview-1-removebg-preview-1-remo.png" alt="">
+ 
+</div>
+
+<app-edit-menu class="editMenu" [product]="products" ></app-edit-menu>
+</div>
+
+ 
+
+
+  
+

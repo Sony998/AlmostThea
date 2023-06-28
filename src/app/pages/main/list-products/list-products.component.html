@@ -1,0 +1,35 @@
+
+<div class="Container2">
+
+    <div class="Products"  [routerLink]="'product/' + product._id" *ngFor="let product of products">
+        <div class="divinferior">
+            <div class="infodiv">
+                <div class="divnametext">
+                    <p> {{product.name}} </p>
+                </div>
+                <div class="divgenerotext">
+                <p> Hombre </p>
+                </div>
+                <div class="divmarcatext">
+                <p> {{product.marca}}</p>
+                </div>
+                <div class="divbigbutton">
+                    <div class="divbuttons" *ngFor="let color of product.colors">
+                        <div class="color" [style.backgroundColor]="color"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="imgdiv">
+            <div class="pricediv">
+                <p>${{ product.price.toLocaleString() }}</p>
+            </div>  
+            <img class="imgsproducts" [src]="product.imgs[0]" alt="">
+        </div>
+
+
+    </div>
+</div>

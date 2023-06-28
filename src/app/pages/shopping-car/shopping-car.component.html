@@ -1,0 +1,30 @@
+
+<img class="back"  (click)="goBack()" src="https://i.postimg.cc/5tQGBmHh/flecha-izquierda.png" alt="">
+<h2 class="titleCar">CARRITO</h2>
+<div class="products" *ngFor="let item of cookie; let i = index">
+  <div class="product"  [routerLink]="'/product/'+ item.theaId">
+    <img class="img" [src]="item.img" alt="">
+    <p class="title">{{item.title}}</p>
+    <p class="size">Talla:{{item.selectedSize}}</p>
+    <div class="color">color: <div [ngStyle]="{'background-color': item.selectedColor}" class="colorSquare"></div></div>
+    <p class="price">${{item.price}}</p>
+    <p class="quantity">x{{item.quantity}}</p>
+  </div>
+  <i (click)="remove(i); calcPrice(cookie)"  class="remove bi bi-x-circle-fill"></i>
+</div>
+<div class="whiteSpace"></div>
+
+<div class="container">
+<div class="promoteCode "><div class="promoteBackground" >
+  <label class="promoteText" for="">CODIGO DE DESCUENTO:</label>
+  <input class="promoteInput" type="text"  [(ngModel)]="discountCode" (ngModelChange)="checkInputLength()" >
+</div></div>
+
+<div class="first subTotal promote">Subtotal: <label class="value" for="">${{subtotal | number:'1.0-0'}}</label></div>
+<div class="send promote">Envio: <label class="value" for="">${{send| number:'1.0-0'}}</label></div>
+<div class="discount promote">Descuento:<label class="value" for="">{{discount}}%</label></div>
+<hr>
+<div class="total promote">Total: <label class="value" for="">${{total| number:'1.0-0'}}</label></div>
+<div class="buyContainer"><button routerLink="/form" class="buy">comprar</button></div>
+
+</div>

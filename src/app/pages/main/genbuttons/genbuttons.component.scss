@@ -1,0 +1,71 @@
+/* Botones selectores */
+
+
+.selector {
+    position:relative;
+    right: auto;
+    padding-top: 23%;
+    width: 100vw;
+    display: flex;
+  
+}
+
+
+button {
+    background-color: black;
+    border-color: #fff;
+    color: white;
+   
+    border-radius: 1px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 2%;
+    margin-left:3%;
+    width: 20vh;
+    height: 8vh;
+    border: none;
+  }
+
+button:hover {
+    background-color: white;
+    border-color: black;
+    color: black;
+}
+
+.btnMujer{
+    margin-left: auto;
+}
+.btnHombre{
+    margin-right: auto;
+}
+/* Redireccion Redes Sociales */
+#social{
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    width: 40%;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 10px;
+}  
+
+img{
+    margin-left: 3%;
+    width: 43%;
+    min-width: 45px;
+    height: auto;
+
+}
+
+a{
+    color: white;
+}
+
+button:active {
+    background-color: white;
+    border-color: black;
+    color: black;
+    transition: 0.9s;
+}

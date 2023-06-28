@@ -1,0 +1,29 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+*{
+    font-family: Fira Code;
+    margin: 0;
+
+}
+
+
+app-navbar{
+   position: fixed;
+    z-index: 1;
+    width: 100%;
+
+}
+app-menu{
+    transition: 1s;
+  }
+
+
+.position{
+    transition: 8s;
+    z-index: -99;
+  }
+  
+
+body{
+    margin-left: 0;
+  }
+  

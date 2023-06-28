@@ -1,0 +1,212 @@
+.menu{
+    background-color:#121212;
+    border-radius: 10px;
+    height: auto;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 10px;
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 0.3fr 0.3fr 2fr 0.2fr 2fr 0.3fr 1.9fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "editar editar"
+      "colorsTitle imgsTitle"
+      "colorSection imgSection"
+      "tagsTitle imgSection"
+      "tagsSection imgSection"
+      "sizeTittle imgSection"
+      "sizeSection imgSection"; 
+  }
+  .editar { grid-area: Editar; }
+  .colorsTitle { grid-area: colorsTitle; }
+  .imgsTitle { grid-area: imgsTitle; }
+  .colorSection { grid-area: colorSection; }
+  .tagsTitle { grid-area: tagsTitle; }
+  .tagsSection { grid-area: tagsSection; }
+  .sizeTittle { grid-area: sizeTittle; }
+  .imgSection { grid-area: imgSection; }
+  .sizeSection { grid-area: sizeSection; }
+h2{ 
+    width: 100%;
+    font-family: Fira Code;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    text-align: center;
+}
+.colorSection{
+   
+    background-color: #2b2a2a;
+    width: 100%;
+    max-width: 324px;
+    margin-left: 20px;
+   max-height: 117px;
+    display: flex;
+   padding-top: 15px;
+    padding-left: 16px;
+    flex-wrap: wrap;
+  
+}
+
+.colorSquare{
+    background-color: rgb(48, 48, 48);
+    width: 17px;
+    height: 17px;
+    margin: 0;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    padding: 0;
+    border: 1px solid black;
+    margin-left: 7px;
+    margin-top: 5px;
+    
+   
+} 
+
+.buttonColor{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    width: auto;
+    padding-right:7px;
+    height: 28px;
+    border: 2px solid black;
+    border-radius: 8px;
+    align-items: center;
+   
+    margin-right: 17px;
+    margin-bottom: 17px;
+    
+}
+.removeButton{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 3px;
+   
+    cursor: pointer;
+    outline: inherit;
+}
+
+.Title{
+  
+    width:47%;
+    font-family: Fira Code;
+    color: white;
+    font-size: 20px;
+    text-align: left;
+
+margin: 0;
+margin-left: 20px;
+margin-bottom: 5px;
+
+}
+
+.imgSection{
+    background-color: #2b2a2a;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 25px;
+    margin-left: 20px;
+
+}
+
+.removeImg{
+    font-family:Fira Code;
+    font-weight: 400;
+    font-size: 15px;
+    background:  white;
+    border: 3px solid #121212;
+    padding: 2px;
+    margin: 0;
+    margin-top: 4px;
+ 
+
+    cursor: pointer;
+
+}
+
+.imgToEdit{
+    border: 3px solid #121212;
+    width: 100px;
+}
+
+.inputPosition{
+    width: 33px;
+   height: 16px;
+   margin-bottom: 3px;
+}
+.imageBlock{
+    max-height: 180px;
+    width: 110px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+
+.tagsSection{    
+    background-color: #2b2a2a;
+    width: 100%;
+    height: fit-content;
+    max-width: 324px;
+    margin-left: 20px;
+    display: flex;
+    padding-top: 15px;
+    padding-left: 16px;
+    flex-wrap: wrap;}
+
+.tag{
+    font-family: Fira Code;
+    font-weight: 700;
+    margin: 0;
+    margin-left: 5px;
+    font-size: 18px;
+
+}
+
+.tagBlock{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    width: auto;
+    padding-right:7px;
+    height: fit-content;
+    border: 2px solid black;
+    border-radius: 8px;
+    align-items: center;
+   margin:0;
+    margin-right: 17px;
+    margin-bottom: 7px;
+}
+
+.sizeBlock{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    width: auto;
+    padding-right:7px;
+    height: fit-content;
+    border: 2px solid black;
+    border-radius: 8px;
+    align-items: center;
+   margin:0;
+    margin-right: 17px;
+    margin-bottom: 7px;
+}
+.sizeSection{
+    background-color: #2b2a2a;
+    width: 100%;
+    height: fit-content;
+    max-width: 324px;
+    margin-left: 20px;
+    display: flex;
+    padding-top: 15px;
+    padding-left: 16px;
+    flex-wrap: wrap;
+}

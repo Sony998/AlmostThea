@@ -1,0 +1,81 @@
+
+app-choice,
+app-frame,
+app-navbar {
+opacity: 1;
+top: 0;
+left: 0;
+}
+app-navbar{
+ position: fixed;
+  z-index: 99;
+  width: 100%;
+
+
+}
+
+
+.postContainer{
+  background-color: rgb(39, 39, 39);
+  top: 0;
+  left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+.formMenu{
+  margin-right: 0vh;
+  width: max-content;
+}
+
+  
+
+
+.frameContainer{
+  margin-top: 100px;
+  width: 250px;
+
+}
+
+.frameContainer {
+  position: relative;
+}
+
+.appFrame, .frameIphone {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.frameIphone{
+  z-index: 2;
+  width: 278px;
+  height: 571px;
+  margin-right: 100px;
+  pointer-events: none;
+}
+.appFrame{
+  margin-top: 18px;
+  margin-left: 15px;
+
+}
+.template {
+  height: auto;
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 1fr 0.8fr; 
+  grid-template-rows: 1.2fr 0.8fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "formMenu frameContainer"
+    "editMenu editMenu"; 
+}
+.formMenu { grid-area: formMenu; }
+.frameContainer { grid-area: frameContainer; }
+.editMenu { 
+  margin-top: 10px;
+  grid-area: editMenu; }

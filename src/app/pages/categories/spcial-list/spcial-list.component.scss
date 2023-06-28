@@ -1,0 +1,161 @@
+*{
+    font-family: Fira Code;
+}
+
+.Container2{
+   padding-top: 11vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(375px, auto);
+    grid-row-gap: 0;
+    grid-column-gap:2%;
+    padding-left: 5px;
+    padding-right: 5px;
+    }
+
+.Products{
+
+    position: relative;
+    display: flex;
+    width: auto;
+    height: 350px;
+    background-color: #ffffff;
+    border: 1.9px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.imgsproducts{
+    width: 90%;
+    height: 195px;
+    margin: 4%;
+}
+.imgdiv{
+    display: flex;
+    position: absolute;
+    width: 90%;
+    height: 68%;
+    top: 3.5%;
+    justify-content: center;
+    background: #C0C0C0;
+}
+
+.pricediv{
+    font-family: 'Firacode', monospace;
+    font-size: 84%;
+    position: absolute;
+    background-color: #ffffff;
+    width: 50%;
+    height: 10%;
+    margin-left: 4%;
+    left: 2%;
+    bottom: 0%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+//* Divs parte inferior en orden descendiente
+.infodiv{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.infodiv p {
+    margin: 0;
+    margin-bottom: 4%;
+  }
+
+.divnametext{
+    position: absolute;
+    top: 0;
+    height: 20%;
+    width: 100%;
+    margin-left: 2%;
+    font-family: 'Firacode', medium;
+    font-style: normal;
+    font-size: 85%;
+    white-space: nowrap; /* Evita el ajuste automático de líneas */
+    overflow: hidden; /* Oculta el contenido que se desborda */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos al final del texto truncado */
+
+
+}
+
+
+.divgenerotext{
+    position: absolute;
+    top: 34%;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    margin-left: 2%;
+    font-family: 'Firacode', monospace;
+    font-size: 67%;
+    color: #6e6e6e;
+
+}
+.divmarcatext{
+    position: absolute;
+    bottom: 0;
+    height: 20%;
+    width: 100%;
+    margin-left: 2%;
+    font-family: 'Firacode', monospace;
+    font-size: 60%;
+
+
+}
+
+
+.divinferior{
+    display: flex;
+    position: absolute;
+    width: 90%;
+    height: 25%;
+    bottom: 2%;
+    left: 5%;
+    
+
+}
+.divbigbutton{
+    margin-top: 8%;
+    width: 50%;
+    height: 20%;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1% 2%; /* Espacio entre los divs internos */
+    height: 30px;
+    width: 50px;
+    font-size:14px;
+    font-weight: 600;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 0.4fr 1fr 1fr;
+    gap: 0px 0px;
+    margin-left: 5px;
+  
+}
+button{
+    width: 15px;
+    height: 15px;
+    border-width: 2%;
+}
+
+.color{
+    height: 15px;
+    width: 15px;
+    border: 1px solid black;
+    margin: 3px;
+}

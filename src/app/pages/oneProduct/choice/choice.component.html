@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="choice ">
+    <p class="name">{{data.name}}</p>
+    <p class="price">${{data.price}}</p>
+    <div class="sizes"><div class="sizes-m">
+        <p *ngFor="let item of data.sizes;let x = index" class="sizeSquare" (click)="addSizeClass(x)" [ngClass]="{'selectedSize': clickedSizeIndex === x}">{{item}}<i class="bi bi-arrow-left-short"></i></p>
+
+    
+    </div></div>
+    
+    <div class="colors div3">
+        <p class="colorNames">colores:</p>
+        <div class="border" *ngFor="let item of data.colors; let i = index" (click)="addBorderClass(i)" [ngClass]="{'selected': clickedIndex === i}">
+
+            <div [class]="'colorSquare color'+(i+1) " [ngStyle]="{'background-color': item}">
+
+            </div>
+<div>
+    
+</div>
+
+        </div>
+    
+    </div>
+    
+    <button class="addCar button div4"><div class="carText" (click)="addCar()">Añadir<br> al carrito</div><div class="shopIcon"> <p class="icon"></p> </div></button>
+    <button  routerLink="/form" class="buy button div5">Comprar</button>
+    
+    
+    <div class="quantity div6">
+    <label class="quantityText">cantidad:</label>
+    <input [(ngModel)]="shop.quantity" class="number" type="number">
+    
+    
+    </div>
+    </div>

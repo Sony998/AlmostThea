@@ -1,0 +1,45 @@
+.frame {
+    position: relative;
+    width: 248px;
+    height: 537px; /* Altura del div frame */
+    overflow-y: scroll; /* Activar desplazamiento vertical */
+    line-height:0
+  }
+  
+  .navbar {
+    margin-top: 0;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    height: 50px; /* Altura de la barra de navegación */
+    z-index: 1; /* Elevar por encima de otros elementos */
+  }
+  
+  /* Estilos adicionales para los elementos restantes */
+  .image {
+    width: 100%;
+    margin-top: 10px;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    z-index: 0;
+  }
+  
+  .choiceSpace {
+    height: auto;
+
+    position: sticky;
+    background-color: #ffffff;
+    z-index: 1;
+    bottom: 0;
+    
+  }
+  
+.statusBar{
+  width: 97%;
+  height: 14px;
+  margin-left: 6px;
+  position: sticky;
+  top: 0px;
+  margin-bottom: 0;
+}

@@ -1,0 +1,32 @@
+<form action="">
+  <label class="inputTitle" for="">Nombre:</label>
+  <input class="inputForm" type="text" placeholder="Escribe tu nombre" [(ngModel)]="userData.nombre" name="nombre">
+  
+  <label class="inputTitle" for="">Numero:</label>
+  <input class="inputForm" type="text" placeholder="Escribe tu número" [(ngModel)]="userData.numero" name="numero">
+  
+  <label class="inputTitle" for="">Dirección:</label>
+  <input class="inputForm" type="text" placeholder="Escribe tu dirección" [(ngModel)]="userData.direccion" name="direccion">
+  
+  <label class="inputTitle">Método de pago:</label>
+  <hr>
+  
+  <div class="payment-options">
+    <div class="payment-option">
+      <input class="checkBox" type="checkbox" [(ngModel)]="userData.nequi" name="metodoPago" (change)="selectCheckbox('nequi')">
+      <label class="pay" for=""> Nequi</label>
+    </div>
+  
+    <div class="payment-option">
+      <input class="checkBox" type="checkbox" [(ngModel)]="userData.contraEntrega" name="metodoPago" (change)="selectCheckbox('contraEntrega')">
+      <label class="pay" for=""> Contra Entrega</label>
+    </div>
+  
+    <div class="payment-option">
+      <input class="checkBox" type="checkbox" [(ngModel)]="userData.daviplata" name="metodoPago" (change)="selectCheckbox('daviplata')">
+      <label class="pay" for="">Daviplata</label>
+    </div>
+  </div>
+  
+  <button class="buy" (click)="saveUser()" routerLink="/popUP">Comprar</button>
+  

@@ -1,0 +1,44 @@
+
+<div class="menu">
+  <h2 class="Editar">Editar</h2>
+  <p class="Title colorsTitle">Colors:</p>
+  <p class="Title imgsTitle">imgs:</p>
+  <div class="colorSection">
+    <div class="buttonColor" *ngFor="let item of product.colors; let i = index">
+      <div
+        class="colorSquare color{{ i + 1 }}"
+        [ngStyle]="{ 'background-color': item }"
+      ></div>
+      <button class="removeButton" (click)="removeColor(i)">x</button>
+    </div>
+  </div>
+
+  <div class="imgSection">
+    <div *ngFor="let item of product.imgs; let x = index" class="imageBlock">
+      <input
+        class="inputPosition"
+        type="number"
+        [(ngModel)]="value"
+        [(ngModel)]="item[1]"
+        (input)="move(item)"
+      />
+
+      <img [src]="item[0]" alt="" class="imgToEdit" />
+      <button class="removeImg" (click)="removeImg(x)">ELiminar</button>
+    </div>
+  </div>
+  <p class="Title tagsTitle">tags</p>
+  <div class="tagsSection">
+
+    <div class="tagBlock" *ngFor="let item of product.tags; let i = index">
+        <p class="tag">{{item}}</p>
+        <button class="removeButton" (click)="removeTag(i)">x</button>
+  </div>
+  </div>
+  <p class="Title sizeTittle">sizes</p>
+  <div class="sizeSection"> 
+     <div class="sizeBlock" *ngFor="let item of product.sizes; let i = index">
+    <p class="tag">{{item}}</p>
+    <button class="removeButton" (click)="removeSize(i)">x</button></div>
+
+</div>

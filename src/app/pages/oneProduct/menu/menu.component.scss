@@ -1,0 +1,57 @@
+
+.responsiveMenu{
+    background-color: #181818;
+   color: rgb(255, 255, 255);
+   margin-top: 0;
+   padding: 0;
+   position:fixed;
+   width: 100vw;
+   height: 100vh;
+   font-weight: 600;
+   padding-top: 2.3vh;
+
+   
+   
+}
+
+.itemResponsive{
+font-family: Fira Code;
+text-decoration: none;
+list-style: none;
+align-self: center;
+text-align: center;
+padding-bottom: 15px;
+margin-bottom: 0px;
+
+}
+
+.menuVisible{
+   top: 8%;
+   left: 0;
+   transition: 1s;
+}
+
+.menuInvisible{
+   top: 100%;
+   left: 0;
+   transition: 1s;
+}
+
+hr{ 
+   margin-top: 3px;
+   margin-bottom: 7px;
+   height: 3.5px;
+   width: 85vw;
+   background-color: wheat;
+   border: none;
+}
+
+.genere{
+   text-align: left;
+   margin-left: 7.4vw;
+   padding-bottom: 4px;
+}
+a{
+   color: antiquewhite;
+   text-decoration: none;
+}
