@@ -1,16 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Product } from 'models/product.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProductsService {
- 
+export class ProductService {
+  private baseUrl = 'http://localhost:4000/products';
+
   constructor(private http: HttpClient) {}
 
-  getProducts(url:any): Observable<any> {
-      return this.http.get<any>("http://localhost:4000/products/page=1");
-    
-}
+  getProducts(page: number): Observable<any> {
+    const url = `${this.baseUrl}/page=${page}`;
+    return this.http.get<any>(url);
+  }
 }

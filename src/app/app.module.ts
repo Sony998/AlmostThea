@@ -25,7 +25,7 @@ import { ListProductsComponent } from './pages/main/list-products/list-products.
 import { SearchComponent } from './pages/categories/search/search.component';
 import { SpcialListComponent } from './pages/categories/spcial-list/spcial-list.component';
 import { GenButtonsComponent } from '../app/pages/main/genbuttons/genbuttons.component';
-
+import { ProductService } from './services/products.service';
 
 library.add(fas);
 
@@ -64,7 +64,7 @@ library.add(fas);
 
     
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

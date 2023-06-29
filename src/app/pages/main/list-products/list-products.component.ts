@@ -1,29 +1,56 @@
-import { Component, Input } from '@angular/core';
-import { ProductsService } from '../../../services/products.service';
-import { Product } from '../../../../../models/product.model';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { ProductService } from 'src/app/services/products.service';
+import { Product } from '../../../../../models/product.model';
+
 @Component({
   selector: 'app-list-products',
   templateUrl: './list-products.component.html',
   styleUrls: ['./list-products.component.scss']
 })
-export class ListProductsComponent {
-  id!: string; // Declaración de la propiedad 'id'
-  title = 'api';
-  public products: Product[] = [];
-  url:string="";
+export class ListProductsComponent implements OnInit, OnDestroy {
+  products: Product[] = [];
+  currentPage: number = 1;
+  pageSize: number = 10;
+  url: string = '';
+  private routeSubscription: Subscription | undefined;
 
-  constructor(  private route: ActivatedRoute,private productService: ProductsService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private productService: ProductService
+  ) {}
 
   ngOnInit() {
-    this.url=this.route.snapshot.paramMap.get('id')!
-    this.getProducts(this.url);
+    this.routeSubscription = this.route.params.subscribe(params => {
+      this.url = params['id'];
+      this.currentPage = 1;
+      this.products = [];
+      this.getProducts();
+    });
+
+    window.addEventListener('scroll', this.scrollHandler.bind(this));
   }
 
-  getProducts(url: string) {
-    this.productService.getProducts(url).subscribe(
+  ngOnDestroy() {
+    if (this.routeSubscription) {
+      this.routeSubscription.unsubscribe();
+    }
+
+    window.removeEventListener('scroll', this.scrollHandler.bind(this));
+  }
+
+  scrollHandler() {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+      this.currentPage++;
+      this.getProducts();
+    }
+  }
+
+  getProducts() {
+    this.productService.getProducts(this.currentPage).subscribe(
       (response) => {
-        this.products = response.products;
+        this.products = [...this.products, ...response.products];
       },
       (error) => {
         console.error('Error fetching products:', error);
