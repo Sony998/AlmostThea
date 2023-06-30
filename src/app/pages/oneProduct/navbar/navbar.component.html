@@ -35,7 +35,7 @@
     />
   </div>
 </nav>
-<div [ngClass]="{ 'cuadro-blanco': showSquare }" *ngIf="showSquare">
+<div [ngClass]="{ 'cuadro-blanco': showSquare }" *ngIf="showSquare" (click)="noshow($event)">
   <ul>
     <li class="result" *ngFor="let item of data" (click)="noshow($event)" [routerLink]="['/search', formatAsURL(item)]" queryParamsHandling="preserve">
         <i class="bi bi-search"></i> {{ item }}

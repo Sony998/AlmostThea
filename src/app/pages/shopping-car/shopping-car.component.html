@@ -7,7 +7,7 @@
     <p class="title">{{item.title}}</p>
     <p class="size">Talla:{{item.selectedSize}}</p>
     <div class="color">color: <div [ngStyle]="{'background-color': item.selectedColor}" class="colorSquare"></div></div>
-    <p class="price">${{item.price}}</p>
+    <p class="price">${{item.price.toLocaleString()}}</p>
     <p class="quantity">x{{item.quantity}}</p>
   </div>
   <i (click)="remove(i); calcPrice(cookie)"  class="remove bi bi-x-circle-fill"></i>

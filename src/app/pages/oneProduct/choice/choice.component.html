@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="choice ">
     <p class="name">{{data.name}}</p>
-    <p class="price">${{data.price}}</p>
+    <p class="price">${{ data.price.toLocaleString()}}</p>
     <div class="sizes"><div class="sizes-m">
         <p *ngFor="let item of data.sizes;let x = index" class="sizeSquare" (click)="addSizeClass(x)" [ngClass]="{'selectedSize': clickedSizeIndex === x}">{{item}}<i class="bi bi-arrow-left-short"></i></p>
 

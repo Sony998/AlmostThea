@@ -2,9 +2,9 @@
 
 
 .selector {
-    position:relative;
+    position: relative;
     right: auto;
-    padding-top: 23%;
+    padding-top: min(23%, 80px);
     width: 100vw;
     display: flex;
   

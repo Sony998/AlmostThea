@@ -3,6 +3,7 @@
     font-family: Fira Code;
     margin: 0;
 
+
 }
 
 
@@ -14,6 +15,7 @@ app-navbar{
 }
 app-menu{
     transition: 1s;
+    z-index: 8;
   }
 
 
