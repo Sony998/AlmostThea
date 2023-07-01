@@ -27,7 +27,7 @@ export class ProductComponent implements OnInit {
     this.id = this.route.snapshot.paramMap.get('id')!;
     console.log(this.id); 
 
-    const apiUrl = 'http://localhost:4000/product/' + this.id;
+    const apiUrl = 'https://thea.fly.dev/product/' + this.id;
 
     this.apiService.getProduct(apiUrl).subscribe(
       (info) => {

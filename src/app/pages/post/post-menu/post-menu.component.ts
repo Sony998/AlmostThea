@@ -71,7 +71,7 @@ export class PostMenuComponent {
 }
 onSubmit() {
   // Realiza la solicitud POST al servidor
-  this.http.post('http://127.0.0.1:4000/product', this.product)
+  this.http.post('https://thea.fly.dev/product', this.product)
     .subscribe(
       response => {
         // Maneja la respuesta del servidor
@@ -83,6 +83,5 @@ onSubmit() {
       }
     );
 }
-
 
 }

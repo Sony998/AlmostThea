@@ -28,7 +28,7 @@ export class SpcialListComponent implements OnInit, OnDestroy {
       this.query = params['query'];
       this.currentPage = 1;
       this.products = [];
-      const apiUrl = 'http://localhost:4000/search/' + this.query;
+      const apiUrl = 'https://thea.fly.dev/products' + this.query;
       this.apiService.search(this.query, 0, 40).subscribe(
         (info: Object) => {
           this.products = info as Product[];

@@ -7,7 +7,7 @@ import { Product } from 'models/product.model';
   providedIn: 'root'
 })
 export class ProductService {
-  private baseUrl = 'http://localhost:4000/products';
+  private baseUrl = 'https://thea.fly.dev/products';
 
   constructor(private http: HttpClient) {}
 
