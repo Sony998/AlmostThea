@@ -24,7 +24,7 @@ export class ListProductsComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.routeSubscription = this.route.params.subscribe(params => {
       this.url = params['id'];
-      this.currentPage = 1;
+      this.currentPage = 0;
       this.products = [];
       this.getProducts();
     });
