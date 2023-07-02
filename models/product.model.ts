@@ -4,7 +4,7 @@ export interface Product {
     genero: number;
     discount: number;
     imgs: string[0];
-    marca: string;
+    brand: string;
     name: string;
     price: number;
     relevance: number;

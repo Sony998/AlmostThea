@@ -4,12 +4,14 @@
     <input type="text" (input)="Emit()" class="inputItem" placeholder="Nombre del producto" [(ngModel)]="product.name" name="name">
   
     <input type="text" (input)="Emit()" class="inputItem" placeholder="Precio" [(ngModel)]="product.price" name="price">
+    <input type="text" (input)="Emit()" class="inputItem" placeholder="marca" [(ngModel)]="product.brand" name="brand">
     <input type="text" class="inputItem mediumItem" placeholder="Nueva etiqueta" [(ngModel)]="tag" name="tag">
     <button type="button" class="addButton" (click)="addTag(); Emit()">add tag</button>
     <input type="text" class="inputItem mediumItem" placeholder="Nueva talla" [(ngModel)]="size" name="size">
     <button type="button" (click)="addSize(); Emit()" class="addButton">add size</button>
     <input type="text" class="inputItem mediumItem" placeholder="Nueva url" [(ngModel)]="url" name="url">
     <button type="button" (click)="addUrl(); Emit()" class="addButton">add Img</button>
+ 
     <div class="colorContainer">
       <input type="color" class="inputItem mediumItem color" [(ngModel)]="color" name="color">
       <button type="button" (click)="addColor(); Emit();" class="addButton colorButton">add color</button>

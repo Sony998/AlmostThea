@@ -20,6 +20,7 @@ export class PostMenuComponent {
   tag:string=""
   male=false
   female=false
+  brand:string=""
   product={
     name:String(),
     price:String(),
@@ -29,6 +30,7 @@ export class PostMenuComponent {
     sizes:Array(),
     imgs:Array(),
     gender:Number(),
+    brand:String()
    
     }
     Emit(){  
