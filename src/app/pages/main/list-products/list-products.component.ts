@@ -11,7 +11,7 @@ import { Product } from '../../../../../models/product.model';
 })
 export class ListProductsComponent implements OnInit, OnDestroy {
   products: Product[] = [];
-  currentPage: number = 1;
+  currentPage: number = 0;
   pageSize: number = 10;
   url: string = '';
   private routeSubscription: Subscription | undefined;
