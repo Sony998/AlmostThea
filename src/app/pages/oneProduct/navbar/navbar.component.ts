@@ -40,7 +40,7 @@ onEnter(event: any) {
   this.showSquare = false;
 }
 search(valueInput: any) {
-  this.apiService.search(valueInput, 0,10).pipe(
+  this.apiService.search(valueInput,0,10).pipe(
     map((response: any) => response.map((product: any) => product.name))
   ).subscribe((names: string[]) => {
     this.data = names;

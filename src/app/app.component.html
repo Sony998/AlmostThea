@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <app-navbar  class= "sometingf" (stateNavMenu)=stateOfmenu($event) ></app-navbar>
+
 <app-menu  [ngClass]="{'choiceFront':!stateToggle,'choiceBack':stateToggle }" [state]="stateToggle"></app-menu>
 <router-outlet></router-outlet>

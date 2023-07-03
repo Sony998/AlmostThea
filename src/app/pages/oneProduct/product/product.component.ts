@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { APIService } from '../../../services/api.service';
 import { ActivatedRoute } from '@angular/router';
-
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -20,7 +20,8 @@ export class ProductComponent implements OnInit {
   data: any;
   constructor(
     private route: ActivatedRoute,
-    private apiService: APIService
+    private apiService: APIService,
+    private location: Location
   ) { }
 
   ngOnInit(): void {
@@ -41,6 +42,9 @@ export class ProductComponent implements OnInit {
 
   stateOfmenu(navState: any) {
     this.stateToggle = navState;
+  }
+   goBack() {
+    this.location.back();
   }
 }
 

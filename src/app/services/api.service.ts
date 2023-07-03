@@ -17,6 +17,6 @@ getProduct(url:string) {
 search(value:any , page:any ,limit:any){
 
   const cleanedValue = encodeURIComponent(value);
-  return this.http.get("https://thea.fly.dev/products/search?query=${cleanedValue}&page=${page}&limit=${limit}");
+  return this.http.get(`https://thea.fly.dev/products/search?query=${cleanedValue}&page=${page}&limit=${limit}`);
 
 }}

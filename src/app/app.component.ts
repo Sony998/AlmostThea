@@ -9,8 +9,8 @@ export class AppComponent {
   title = 'Thea';
 
   stateToggle = false;
-
   stateOfmenu(navState: any) {
     this.stateToggle = navState;
   }
+
 }
