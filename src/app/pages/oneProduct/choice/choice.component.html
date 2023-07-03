@@ -3,7 +3,7 @@
     <p class="name">{{data.name}}</p>
     <p class="price">${{ data.price.toLocaleString()}}</p>
     <div class="sizes"><div class="sizes-m">
-        <p *ngFor="let item of data.sizes;let x = index" class="sizeSquare" (click)="addSizeClass(x)" [ngClass]="{'selectedSize': clickedSizeIndex === x}">{{item}}<i class="bi bi-arrow-left-short"></i></p>
+        <p *ngFor="let item of data.sizes;let x = index" class="sizeSquare" (click)="addSizeClass(x)" [ngClass]="{'selectedSize': clickedSizeIndex === x}">{{item}}</p>
 
     
     </div></div>
@@ -23,7 +23,7 @@
     
     </div>
     
-    <button class="addCar button div4"><div class="carText" (click)="addCar()">Añadir<br> al carrito</div><div class="shopIcon"> <p class="icon"></p> </div></button>
+    <button (click)="addCar()" class="addCar button div4"><div class="carText" >Añadir<br> al carrito</div><div class="shopIcon"> <i class="bi bi-cart3"></i> </div></button>
     <button  routerLink="/form" class="buy button div5">Comprar</button>
     
     

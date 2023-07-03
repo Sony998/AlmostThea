@@ -1,5 +1,5 @@
 
-
+@import "~bootstrap-icons/font/bootstrap-icons.css";
 .choice{
     font-family: 'Fira Code';
     background: #ffffff;
@@ -63,7 +63,7 @@ margin-left: 10%;}
     margin-bottom: 10px;
     margin-top: 0px;
    height: 45px;
-
+   display: flex;
    align-items: center;
    text-align: left;
 
@@ -101,10 +101,12 @@ margin-left: 10%;}
  }
 
  .shopIcon{
-    font-size: 35px;
+    font-size: 32px;
     margin: 0;
-    margin-left: 4px;
-    padding-bottom: 5px;
+    margin-left: auto;
+    margin-right: 17px;
+    padding-bottom: 0px;
+    margin-top: 3px;
  }
  .icon{
     margin-top:0px;
@@ -177,13 +179,14 @@ margin-bottom: 6%;
 .sizes-m{
     background-color: #D9D9D9;
     border: solid 1px black;
-    width: 30px;
+    width: 34px;
     max-height: auto;
     height:fit-content;
  
     display: block;
     text-align: center;
     margin-top: auto;
+    padding-bottom: 10px;
    
 
 }
@@ -198,11 +201,12 @@ margin-bottom: 6%;
     border: 1px solid rgb(255, 255, 255);
     border: solid 1px black;
     color: black;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 10px;
-    height: 15px;
-    width: 19px;
-  margin-left: 2px;
+    height: 18px;
+    width: 22px;
+  margin-left: 4px;
+  margin-top: 7px;
   
 
 }
