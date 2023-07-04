@@ -7,12 +7,16 @@ import { Product } from 'models/product.model';
   providedIn: 'root'
 })
 export class ProductService {
-  private baseUrl = 'https://thea.fly.dev/products';
+  public baseUrl = 'https://thea.fly.dev/products/';
 
   constructor(private http: HttpClient) {}
 
   getProducts(page: number): Observable<any> {
     const url = `${this.baseUrl}/page=${page}`;
     return this.http.get<any>(url);
+  }
+  getProductsbyGenere(page: number, genere: number,): Observable<any> {
+    const urlgenere = `${this.baseUrl}/genere/${genere}/page=${page}`;;
+    return this.http.get<any>(urlgenere);
   }
 }

@@ -1,7 +1,7 @@
 export interface Product {
     _id: string;
     colors: string[];
-    genere: number;
+    gender: number;
     discount: number;
     imgs: string[0];
     brand: string;
@@ -10,4 +10,9 @@ export interface Product {
     relevance: number;
     tags: string[];
   }
-  
+
+
+
+
+
+

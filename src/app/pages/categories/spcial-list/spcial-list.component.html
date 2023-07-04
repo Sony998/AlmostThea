@@ -8,9 +8,12 @@
                     <p> {{product.name}} </p>
                 </div>
                 <div class="divgenerotext">
-                <p> {{product.genere}} </p>
+                    <div class="divgenerotext">
+                        <p *ngIf="product.gender === 1">men</p>
+                        <p *ngIf="product.gender === 2">Mujer</p>
+                    </div>
                 </div>
-                <div class="divmarcatext">
+                <div cla3ss="divmarcatext">
                 <p> {{product.brand}}</p>
                 </div>
                 <div class="divbigbutton">
